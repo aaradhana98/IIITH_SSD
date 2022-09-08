@@ -1,0 +1,46 @@
+
+.center{
+    width: 100px;
+    height: 200px;
+	position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.gradient {
+	background-image: linear-gradient(to right, yellow , white);
+}
+
+#round {
+  border-radius: 10px;
+  padding: 10px; 
+  box-shadow: 5px 5px 5px #999; 
+}
+
+.border:hover {
+   border-color: white;
+}
+
+#add{
+	background-color: green;
+}
+
+#delete{
+	background-color: red;
+}
+
+body {
+	font-family:Arial;
+}
+
+table {
+	border :1px solid;
+	padding: 20px;
+}
+
+.heading {
+	background-color:orange;
+}

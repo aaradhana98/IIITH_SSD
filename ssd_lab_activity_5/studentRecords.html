@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Student Records</title>
+		<link rel="stylesheet" href="style.css">
+		<script>
+			function clearTextField(){
+				document.getElementById("roll").value="";
+				document.getElementById("name").value="";
+			}
+		
+			function addNewRowElement(){
+			var studentTable=document.getElementById("stable");
+			var rollNo=document.getElementById("roll").value;
+			var studentName=document.getElementById("name").value;
+			var newRow=document.createElement("tr");
+			var newData1=document.createElement("td");
+			newData1.innerHTML=rollNo;
+			var newData2=document.createElement("td");
+			newData2.innerHTML=studentName;
+			newRow.appendChild(newData1);
+			newRow.appendChild(newData2);
+			studentTable.appendChild(newRow);
+			clearTextField();
+			}
+			
+			function deleteLastRow(){
+			var tab=document.getElementById("stable");
+			var n=tab.rows.length;
+			tab.deleteRow(n-1);
+			}
+			
+		</script>
+	</head>
+	<body class="gradient">
+		<div>
+		<h2>Student Records</h2>
+		<table id="stable">
+			<tr class="heading">
+				<th>Roll No.</th>
+				<th>Student Name</th>
+			</tr>
+			<tr>
+				<td><input type="number" placeholder="Roll No." id="roll" class="border" /></td>
+				<td><input type="text" placeholder="Student Name" id="name" class="border" /></td>
+				<td><button type="button" onclick="addNewRowElement()" id="add">Add New</button></td>
+			</tr>
+			<tr>
+				<td><button type="button" onclick="deleteLastRow()"id="delete">Delete Last Record</button></td>
+			</tr>
+		</table>
+		</div>
+	</body>
+</html>
