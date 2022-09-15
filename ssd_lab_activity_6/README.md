@@ -1,1 +1,1 @@
-An alert box is popped up if passwords dont match but the form is submitted.
+An alert box is popped up when the form is submitted but the passwords dont match.
